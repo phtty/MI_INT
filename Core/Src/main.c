@@ -102,7 +102,7 @@ int main(void)
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */

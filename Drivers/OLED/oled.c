@@ -50,15 +50,16 @@ void OLED_DisPlay_Off(void)
 // mode:数据/命令标志 0,表示命令;1,表示数据;
 void OLED_WR_Byte(uint8_t dat, uint8_t mode)
 {
-	uint8_t i;
 	if (mode)
 		OLED_DC_Set();
 	else
-		OLED_DC_Clr();
-	OLED_CS_Clr();
+		OLED_DC_Reset();
+
+	OLED_CS_Reset();
 	HAL_SPI_Transmit(&hspi1, &dat, sizeof(dat), 500);
 	OLED_CS_Set();
-	OLED_DC_Set();
+
+	OLED_DC_Set();										// 置位命令数据选择
 }
 
 // 清屏函数
@@ -138,31 +139,14 @@ void OLED_Display_5x7(uint8_t x, uint8_t y, uint8_t *dp)
 // 送指令到晶联讯字库IC
 void Send_Command_to_ROM(uint8_t dat)
 {
-	uint8_t i;
-	for (i = 0; i < 8; i++) {
-		OLED_SCL_Clr();
-		if (dat & 0x80) {
-			OLED_SDA_Set();
-		} else {
-			OLED_SDA_Clr();
-		}
-		dat <<= 1;
-		OLED_SCL_Set();
-	}
+	HAL_SPI_Transmit(&hspi1, &dat, sizeof(dat), 500);
 }
 
 // 从晶联讯字库IC中取汉字或字符数据（1个字节）
 uint8_t Get_data_from_ROM(void)
 {
-	uint8_t i, read = 0;
-	for (i = 0; i < 8; i++) {
-		OLED_SCL_Clr();
-		read <<= 1;
-		if (OLED_READ_FS0()) {
-			read++;
-		}
-		OLED_SCL_Set();
-	}
+	uint8_t read = 0;
+	HAL_SPI_Receive(&hspi1, &read, sizeof(read), 500);
 	return read;
 }
 
@@ -171,7 +155,7 @@ uint8_t Get_data_from_ROM(void)
 void OLED_get_data_from_ROM(uint8_t addrHigh, uint8_t addrMid, uint8_t addrLow, uint8_t *pbuff, uint8_t DataLen)
 {
 	uint8_t i;
-	OLED_ROM_CS_Clr();
+	OLED_ROM_CS_Reset();
 	Send_Command_to_ROM(0x03);
 	Send_Command_to_ROM(addrHigh);
 	Send_Command_to_ROM(addrMid);
@@ -274,7 +258,7 @@ void OLED_ShowNum(uint8_t x, uint8_t y, float num1, uint8_t len)
 	uint32_t t, num;
 	x   = x + len * 8 + 8;                      // 要显示的小数最低位的横坐标
 	num = num1 * 100;                           // 将小数左移两位并转化为整数
-	OLED_Display_GB2312_string(x - 24, y, "."); // 显示小数点
+	OLED_Display_GB2312_string(x - 24, y, (uint8_t*)"."); // 显示小数点
 	for (i = 0; i < len; i++) {
 		t   = num % 10; // 取个位数的数值
 		num = num / 10; // 将整数右移一位
@@ -282,34 +266,34 @@ void OLED_ShowNum(uint8_t x, uint8_t y, float num1, uint8_t len)
 		if (i == 2) { x -= 8; } // 当显示出来两个小数之后，空出小数点的位置
 		switch (t) {
 			case 0:
-				OLED_Display_GB2312_string(x, y, "0");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"0");
 				break;
 			case 1:
-				OLED_Display_GB2312_string(x, y, "1");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"1");
 				break;
 			case 2:
-				OLED_Display_GB2312_string(x, y, "2");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"2");
 				break;
 			case 3:
-				OLED_Display_GB2312_string(x, y, "3");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"3");
 				break;
 			case 4:
-				OLED_Display_GB2312_string(x, y, "4");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"4");
 				break;
 			case 5:
-				OLED_Display_GB2312_string(x, y, "5");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"5");
 				break;
 			case 6:
-				OLED_Display_GB2312_string(x, y, "6");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"6");
 				break;
 			case 7:
-				OLED_Display_GB2312_string(x, y, "7");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"7");
 				break;
 			case 8:
-				OLED_Display_GB2312_string(x, y, "8");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"8");
 				break;
 			case 9:
-				OLED_Display_GB2312_string(x, y, "9");
+				OLED_Display_GB2312_string(x, y, (uint8_t*)"9");
 				break;
 		}
 	}
@@ -318,27 +302,6 @@ void OLED_ShowNum(uint8_t x, uint8_t y, float num1, uint8_t len)
 // OLED的初始化
 void OLED_Init(void)
 {
-	GPIO_InitTypeDef GPIO_InitStructure;
-
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); // 使能A端口时钟
-	GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_5;
-	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;     // 普通输出模式
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;     // 推挽输出
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz; // 100MHz
-	GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;      // 上拉
-	GPIO_Init(GPIOA, &GPIO_InitStructure);             // 初始化GPIOA
-
-	GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_4;
-	GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_IN;      // 输入模式
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;     //
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz; // 100MHz
-	GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;      // 上拉
-	GPIO_Init(GPIOA, &GPIO_InitStructure);             // 初始化GPIOA
-
-	GPIO_SetBits(GPIOA, GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5);
-
-	delay_ms(200);
-
 	OLED_WR_Byte(0xAE, OLED_CMD); //--turn off oled panel
 	OLED_WR_Byte(0x00, OLED_CMD); //---set low column address
 	OLED_WR_Byte(0x10, OLED_CMD); //---set high column address

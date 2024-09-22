@@ -63,6 +63,8 @@ void Error_Handler(void);
 #define ENCODER_CLK_GPIO_Port	GPIOA
 #define ENCODER_DT_GPIO_Pin		GPIO_PIN_1
 #define ENCODER_DT_GPIO_Port	GPIOA
+#define OLED_DC_Pin			    GPIO_PIN_4			// OLED片选
+#define OLED_DC_GPIO_Port		GPIOA
 #define OLED_CS1_Pin			GPIO_PIN_4			// OLED片选
 #define OLED_CS1_GPIO_Port		GPIOC
 #define OLED_CS2_Pin			GPIO_PIN_5
