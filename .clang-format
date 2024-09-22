@@ -6,7 +6,7 @@ Language: Cpp
 #          indent conf
 ###################################
 
-UseTab: Never
+UseTab: Always
 IndentWidth: 4
 TabWidth: 4
 ColumnLimit: 0

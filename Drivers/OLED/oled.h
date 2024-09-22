@@ -31,21 +31,21 @@
 #define OLED_CMD  0	//Ð´ÃüÁî
 #define OLED_DATA 1	//Ð´Êý¾Ý
 
-void OLED_ColorTurn(u8 i);
-void OLED_DisplayTurn(u8 i);
-void OLED_WR_Byte(u8 dat,u8 cmd);
+void OLED_ColorTurn(uint8_t i);
+void OLED_DisplayTurn(uint8_t i);
+void OLED_WR_Byte(uint8_t dat,uint8_t cmd);
 void OLED_Clear(void);
-void OLED_address(u8 x,u8 y);
-void OLED_Display_128x64(u8 *dp);
-void OLED_Display_16x16(u8 x,u8 y,u8 *dp);
-void OLED_Display_8x16(u8 x,u8 y,u8 *dp);
-void OLED_Display_5x7(u8 x,u8 y,u8 *dp);
-void Send_Command_to_ROM(u8 dat);
-u8 Get_data_from_ROM(void);
-void OLED_get_data_from_ROM(u8 addrHigh,u8 addrMid,u8 addrLow,u8 *pbuff,u8 DataLen);
-void OLED_Display_GB2312_string(u8 x,u8 y,u8 *text);
-void OLED_Display_string_5x7(u8 x,u8 y,u8 *text);
-void OLED_ShowNum(u8 x,u8 y,float num,u8 len);
+void OLED_address(uint8_t x,uint8_t y);
+void OLED_Display_128x64(uint8_t *dp);
+void OLED_Display_16x16(uint8_t x,uint8_t y,uint8_t *dp);
+void OLED_Display_8x16(uint8_t x,uint8_t y,uint8_t *dp);
+void OLED_Display_5x7(uint8_t x,uint8_t y,uint8_t *dp);
+void Send_Command_to_ROM(uint8_t dat);
+uint8_t Get_data_from_ROM(void);
+void OLED_get_data_from_ROM(uint8_t addrHigh,uint8_t addrMid,uint8_t addrLow,uint8_t *pbuff,uint8_t DataLen);
+void OLED_Display_GB2312_string(uint8_t x,uint8_t y,uint8_t *text);
+void OLED_Display_string_5x7(uint8_t x,uint8_t y,uint8_t *text);
+void OLED_ShowNum(uint8_t x,uint8_t y,float num,uint8_t len);
 void OLED_Init(void);
 #endif
 
