@@ -1,6 +1,5 @@
 #include "oled.h"
 
-
 // 反显函数
 /**
  * @brief 反显函数，设置OLED为反色显示或正常显示
@@ -59,7 +58,7 @@ void OLED_WR_Byte(uint8_t dat, uint8_t mode)
 	HAL_SPI_Transmit(&hspi1, &dat, sizeof(dat), 500);
 	OLED_CS_Set();
 
-	OLED_DC_Set();										// 置位命令数据选择
+	OLED_DC_Set(); // 置位命令数据选择
 }
 
 // 清屏函数
@@ -68,8 +67,8 @@ void OLED_Clear(void)
 	uint8_t i, n;
 	for (i = 0; i < 8; i++) {
 		OLED_WR_Byte(0xb0 + i, OLED_CMD); // 设置页地址
-		OLED_WR_Byte(0x10, OLED_CMD);     // 设置列地址的高4位
-		OLED_WR_Byte(0x00, OLED_CMD);     // 设置列地址的低4位
+		OLED_WR_Byte(0x10, OLED_CMD);	  // 设置列地址的高4位
+		OLED_WR_Byte(0x00, OLED_CMD);	  // 设置列地址的低4位
 		for (n = 0; n < 128; n++) {
 			OLED_WR_Byte(0x00, OLED_DATA); // 清除所有数据
 		}
@@ -79,9 +78,9 @@ void OLED_Clear(void)
 // 设置起始地址
 void OLED_address(uint8_t x, uint8_t y)
 {
-	OLED_WR_Byte(0xb0 + y, OLED_CMD);                 // 设置页地址
+	OLED_WR_Byte(0xb0 + y, OLED_CMD);				  // 设置页地址
 	OLED_WR_Byte(((x & 0xf0) >> 4) | 0x10, OLED_CMD); // 设置列地址的高4位
-	OLED_WR_Byte((x & 0x0f), OLED_CMD);               // 设置列地址的低4位
+	OLED_WR_Byte((x & 0x0f), OLED_CMD);				  // 设置列地址的低4位
 }
 
 // 显示128x64点阵图像
@@ -182,8 +181,8 @@ void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text)
 			fontaddr = fontaddr * 32;
 
 			addrHigh = (fontaddr & 0xff0000) >> 16; // 地址的高8位,共24位
-			addrMid  = (fontaddr & 0xff00) >> 8;    // 地址的中8位,共24位
-			addrLow  = (fontaddr & 0xff);           // 地址的低8位,共24位
+			addrMid	 = (fontaddr & 0xff00) >> 8;	// 地址的中8位,共24位
+			addrLow	 = (fontaddr & 0xff);			// 地址的低8位,共24位
 
 			OLED_get_data_from_ROM(addrHigh, addrMid, addrLow, fontbuf, 32);
 			// 取32个字节的数据，存到"fontbuf[32]"
@@ -198,8 +197,8 @@ void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text)
 			fontaddr = fontaddr * 32;
 
 			addrHigh = (fontaddr & 0xff0000) >> 16;
-			addrMid  = (fontaddr & 0xff00) >> 8;
-			addrLow  = (fontaddr & 0xff);
+			addrMid	 = (fontaddr & 0xff00) >> 8;
+			addrLow	 = (fontaddr & 0xff);
 
 			OLED_get_data_from_ROM(addrHigh, addrMid, addrLow, fontbuf, 32);
 			OLED_Display_16x16(x, y, fontbuf);
@@ -212,8 +211,8 @@ void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text)
 			fontaddr = (unsigned long)(fontaddr + 0x3cf80);
 
 			addrHigh = (fontaddr & 0xff0000) >> 16;
-			addrMid  = (fontaddr & 0xff00) >> 8;
-			addrLow  = fontaddr & 0xff;
+			addrMid	 = (fontaddr & 0xff00) >> 8;
+			addrLow	 = fontaddr & 0xff;
 
 			OLED_get_data_from_ROM(addrHigh, addrMid, addrLow, fontbuf, 16);
 			OLED_Display_8x16(x, y, fontbuf);
@@ -236,8 +235,8 @@ void OLED_Display_string_5x7(uint8_t x, uint8_t y, uint8_t *text)
 			fontaddr = (unsigned long)(fontaddr + 0x3bfc0);
 
 			addrHigh = (fontaddr & 0xff0000) >> 16;
-			addrMid  = (fontaddr & 0xff00) >> 8;
-			addrLow  = fontaddr & 0xff;
+			addrMid	 = (fontaddr & 0xff00) >> 8;
+			addrLow	 = fontaddr & 0xff;
 
 			OLED_get_data_from_ROM(addrHigh, addrMid, addrLow, fontbuf, 8);
 			OLED_Display_5x7(x, y, fontbuf);
@@ -256,44 +255,44 @@ void OLED_ShowNum(uint8_t x, uint8_t y, float num1, uint8_t len)
 {
 	uint8_t i;
 	uint32_t t, num;
-	x   = x + len * 8 + 8;                      // 要显示的小数最低位的横坐标
-	num = num1 * 100;                           // 将小数左移两位并转化为整数
-	OLED_Display_GB2312_string(x - 24, y, (uint8_t*)"."); // 显示小数点
+	x	= x + len * 8 + 8;								   // 要显示的小数最低位的横坐标
+	num = num1 * 100;									   // 将小数左移两位并转化为整数
+	OLED_Display_GB2312_string(x - 24, y, (uint8_t *)"."); // 显示小数点
 	for (i = 0; i < len; i++) {
-		t   = num % 10; // 取个位数的数值
+		t	= num % 10; // 取个位数的数值
 		num = num / 10; // 将整数右移一位
 		x -= 8;
 		if (i == 2) { x -= 8; } // 当显示出来两个小数之后，空出小数点的位置
 		switch (t) {
 			case 0:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"0");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"0");
 				break;
 			case 1:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"1");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"1");
 				break;
 			case 2:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"2");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"2");
 				break;
 			case 3:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"3");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"3");
 				break;
 			case 4:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"4");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"4");
 				break;
 			case 5:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"5");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"5");
 				break;
 			case 6:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"6");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"6");
 				break;
 			case 7:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"7");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"7");
 				break;
 			case 8:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"8");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"8");
 				break;
 			case 9:
-				OLED_Display_GB2312_string(x, y, (uint8_t*)"9");
+				OLED_Display_GB2312_string(x, y, (uint8_t *)"9");
 				break;
 		}
 	}
