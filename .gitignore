@@ -1,0 +1,22 @@
+# dot files
+/.vscode
+/.eide
+/.eide.usr.ctx.json
+
+# project out
+/build
+/bin
+/obj
+/out
+
+# eide template
+*.ept
+*.eide-template
+
+# cubeMX file
+.mxproject
+*.ioc
+
+# MDK-ARM
+/MDK-ARM/*
+!/MDK-ARM/startup_stm32h750xx.s
