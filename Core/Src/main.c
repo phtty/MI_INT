@@ -102,8 +102,9 @@ int main(void)
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
+		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 		/* USER CODE END WHILE */
-		HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)"hub yes D", R_buff, sizof(R_buff), 500);
+
 		/* USER CODE BEGIN 3 */
 	}
 	/* USER CODE END 3 */
