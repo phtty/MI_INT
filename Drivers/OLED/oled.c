@@ -1,5 +1,5 @@
 #include "oled.h"
-#include "stdlib.h"
+
 
 // 反显函数
 /**
@@ -48,23 +48,15 @@ void OLED_DisPlay_Off(void)
 
 // 向SSD1306写入一个字节。
 // mode:数据/命令标志 0,表示命令;1,表示数据;
-void OLED_WR_Byte(uint8_t dat, uint8_t cmd)
+void OLED_WR_Byte(uint8_t dat, uint8_t mode)
 {
 	uint8_t i;
-	if (cmd)
+	if (mode)
 		OLED_DC_Set();
 	else
 		OLED_DC_Clr();
 	OLED_CS_Clr();
-	for (i = 0; i < 8; i++) {
-		OLED_SCL_Clr();
-		if (dat & 0x80)
-			OLED_SDA_Set();
-		else
-			OLED_SDA_Clr();
-		OLED_SCL_Set();
-		dat <<= 1;
-	}
+	HAL_SPI_Transmit(&hspi1, &dat, sizeof(dat), 500);
 	OLED_CS_Set();
 	OLED_DC_Set();
 }
