@@ -135,33 +135,15 @@ void OLED_Display_5x7(uint8_t x, uint8_t y, uint8_t *dp)
 	}
 }
 
-// 送指令到晶联讯字库IC
-void Send_Command_to_ROM(uint8_t dat)
-{
-	HAL_SPI_Transmit(&hspi1, &dat, sizeof(dat), 500);
-}
-
-// 从晶联讯字库IC中取汉字或字符数据（1个字节）
-uint8_t Get_data_from_ROM(void)
-{
-	uint8_t read = 0;
-	HAL_SPI_Receive(&hspi1, &read, sizeof(read), 500);
-	return read;
-}
-
 // 从相关地址（addrHigh：地址高字节,addrMid：地址中字节,addrLow：地址低字节）中连续读出DataLen个字节的数据到 pbuff的地址
 // 连续读取
 void OLED_get_data_from_ROM(uint8_t addrHigh, uint8_t addrMid, uint8_t addrLow, uint8_t *pbuff, uint8_t DataLen)
 {
-	uint8_t i;
+	uint8_t i, addr[4] = {0x03, addrHigh, addrMid, addrLow};
 	OLED_ROM_CS_Reset();
-	Send_Command_to_ROM(0x03);
-	Send_Command_to_ROM(addrHigh);
-	Send_Command_to_ROM(addrMid);
-	Send_Command_to_ROM(addrLow);
-	for (i = 0; i < DataLen; i++) {
-		*(pbuff + i) = Get_data_from_ROM();
-	}
+	HAL_SPI_Transmit(&hspi1, addr, sizeof(addr), 500);
+	HAL_SPI_Receive(&hspi1, pbuff, DataLen, 500);
+	
 	OLED_ROM_CS_Set();
 }
 
@@ -329,5 +311,5 @@ void OLED_Init(void)
 	OLED_WR_Byte(0xA4, OLED_CMD); // Disable Entire Display On (0xa4/0xa5)
 	OLED_WR_Byte(0xA6, OLED_CMD); // Disable Inverse Display On (0xa6/a7)
 	OLED_Clear();
-	OLED_WR_Byte(0xAF, OLED_CMD); /*display ON*/
+	OLED_WR_Byte(0xAF, OLED_CMD); //display ON
 }
