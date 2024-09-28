@@ -312,4 +312,6 @@ void OLED_Init(void)
 	OLED_WR_Byte(0xA6, OLED_CMD); // Disable Inverse Display On (0xa6/a7)
 	OLED_Clear();
 	OLED_WR_Byte(0xAF, OLED_CMD); //display ON
+	uint8_t dummy_byte = 0;
+	OLED_get_data_from_ROM(1,1,1,&dummy_byte, 1);	// 不知为何，字库芯片第一个读出来的内容是dummy
 }

@@ -20,3 +20,6 @@
 # MDK-ARM
 /MDK-ARM/*
 !/MDK-ARM/startup_stm32h750xx.s
+
+# gitblame
+.gitblame

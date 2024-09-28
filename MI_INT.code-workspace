@@ -24,7 +24,11 @@
             "editor.insertSpaces": true,
             "editor.tabSize": 4,
             "editor.autoIndent": "advanced"
-        }
+        },
+        "[markdown]": {
+            "editor.wordWrap": "off"
+        },
+        "editor.wordWrap": "off"
     },
     "extensions": {
         "recommendations": [
