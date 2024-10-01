@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file    gpio.c
-  * @brief   This file provides code for the configuration
-  *          of all used GPIO pins.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+	******************************************************************************
+	* @file    gpio.c
+	* @brief   This file provides code for the configuration
+	*          of all used GPIO pins.
+	******************************************************************************
+	* @attention
+	*
+	* Copyright (c) 2024 STMicroelectronics.
+	* All rights reserved.
+	*
+	* This software is licensed under terms that can be found in the LICENSE file
+	* in the root directory of this software component.
+	* If no LICENSE file comes with this software, it is provided AS-IS.
+	*
+	******************************************************************************
+	*/
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -33,53 +33,62 @@
 /* USER CODE END 1 */
 
 /** Configure pins
-     PC14-OSC32_IN (OSC32_IN)   ------> RCC_OSC32_IN
-     PC15-OSC32_OUT (OSC32_OUT)   ------> RCC_OSC32_OUT
-     PH0-OSC_IN (PH0)   ------> RCC_OSC_IN
-     PH1-OSC_OUT (PH1)   ------> RCC_OSC_OUT
-     PA13 (JTMS/SWDIO)   ------> DEBUG_JTMS-SWDIO
-     PA14 (JTCK/SWCLK)   ------> DEBUG_JTCK-SWCLK
+		 PC14-OSC32_IN (OSC32_IN)   ------> RCC_OSC32_IN
+		 PC15-OSC32_OUT (OSC32_OUT)   ------> RCC_OSC32_OUT
+		 PH0-OSC_IN (PH0)   ------> RCC_OSC_IN
+		 PH1-OSC_OUT (PH1)   ------> RCC_OSC_OUT
+		 PA13 (JTMS/SWDIO)   ------> DEBUG_JTMS-SWDIO
+		 PA14 (JTCK/SWCLK)   ------> DEBUG_JTCK-SWCLK
 */
 void MX_GPIO_Init(void)
 {
 
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOE_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
+	/* GPIO Ports Clock Enable */
+	__HAL_RCC_GPIOE_CLK_ENABLE();
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	__HAL_RCC_GPIOH_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : LED Pin */
-  GPIO_InitStruct.Pin = LED_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
-
-
-  HAL_GPIO_WritePin(OLED_DC_GPIO_Port, OLED_DC_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : OLED_DC PIN */
-  GPIO_InitStruct.Pin = OLED_DC_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(OLED_DC_GPIO_Port, &GPIO_InitStruct);
+	/*Configure GPIO pin : LED Pin */
+	GPIO_InitStruct.Pin = LED_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
 
 
-  HAL_GPIO_WritePin(GPIOC, OLED_CS1_Pin|OLED_CS2_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(OLED_DC_GPIO_Port, OLED_DC_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : OLED_CS PIN */
-  GPIO_InitStruct.Pin = OLED_CS1_Pin|OLED_CS2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+	/*Configure GPIO pin : OLED_DC PIN */
+	GPIO_InitStruct.Pin = OLED_DC_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(OLED_DC_GPIO_Port, &GPIO_InitStruct);
+
+	HAL_GPIO_WritePin(ENCODER_SW_GPIO_Port, ENCODER_SW_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin : ENCODER_SW PIN */
+	GPIO_InitStruct.Pin = ENCODER_SW_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(ENCODER_SW_GPIO_Port, &GPIO_InitStruct);
+
+
+	HAL_GPIO_WritePin(GPIOC, OLED_CS1_Pin|OLED_CS2_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin : OLED_CS PIN */
+	GPIO_InitStruct.Pin = OLED_CS1_Pin|OLED_CS2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 }
 

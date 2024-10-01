@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "oled.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,32 +97,32 @@ int main(void)
 	MX_SPI1_Init();
 	MX_TIM2_Init();
 	/* USER CODE BEGIN 2 */
+	char text[128] = {0};
+	uint8_t encoder_count = 0;
+
 	OLED_Init();
 	OLED_ColorTurn(0);//0正常显示，1 反色显示
 	OLED_DisplayTurn(0);//0正常显示 1 屏幕翻转显示
 	OLED_Clear();
-	OLED_Display_GB2312_string(0, 0, (uint8_t*)"1测试显示内容1");
-	OLED_Display_GB2312_string(0, 2, (uint8_t*)"2测试显示内容2");
-	OLED_Display_GB2312_string(0, 4, (uint8_t*)"3测试显示内容3");
-	OLED_Display_GB2312_string(0, 6, (uint8_t*)"3测试显示内容3");
+	OLED_Display_GB2312_string(0, 0, (uint8_t*)"旋转编码器测试");
+
 	HAL_Delay(500);
-	uint8_t line_count = 0;
+	
+
+	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-		HAL_Delay(500);
-		HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+		encoder_count = TIM2->CNT;
 		/* USER CODE END WHILE */
 
-		/* USER CODE BEGIN 3 */
-		OLED_Clear();
-		if(line_count>=4)
-			line_count = 0;
+		sprintf(text,"count:%d", encoder_count);
+		OLED_Display_GB2312_string(0, 4, (uint8_t*)text);
 
-		OLED_Display_GB2312_string(0, line_count*2, (uint8_t*)"测试显示内容");
-		line_count ++;
+		/* USER CODE BEGIN 3 */
+		
 			
 	}
 	/* USER CODE END 3 */
