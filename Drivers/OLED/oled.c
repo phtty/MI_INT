@@ -1,6 +1,6 @@
 #include "oled.h"
 
-// 反显函数
+
 /**
  * @brief 反显函数，设置OLED为反色显示或正常显示
  *
@@ -16,7 +16,11 @@ void OLED_ColorTurn(uint8_t i)
 	}
 }
 
-// 屏幕旋转180度
+
+/**
+ * @brief 旋转屏幕180度
+ * @param i 
+ */
 void OLED_DisplayTurn(uint8_t i)
 {
 	if (i == 0) {
@@ -29,7 +33,9 @@ void OLED_DisplayTurn(uint8_t i)
 	}
 }
 
-// 开启OLED显示
+/**
+ * @brief 开启OLED显示
+ */
 void OLED_DisPlay_On(void)
 {
 	OLED_WR_Byte(0x8D, OLED_CMD); // 电荷泵使能
@@ -37,7 +43,9 @@ void OLED_DisPlay_On(void)
 	OLED_WR_Byte(0xAF, OLED_CMD); // 点亮屏幕
 }
 
-// 关闭OLED显示
+/**
+ * @brief 关闭OLED显示
+ */
 void OLED_DisPlay_Off(void)
 {
 	OLED_WR_Byte(0x8D, OLED_CMD); // 电荷泵使能
@@ -45,8 +53,11 @@ void OLED_DisPlay_Off(void)
 	OLED_WR_Byte(0xAE, OLED_CMD); // 关闭屏幕
 }
 
-// 向SSD1306写入一个字节。
-// mode:数据/命令标志 0,表示命令;1,表示数据;
+/**
+ * @brief 向SSD1306写入一个字节
+ * @param dat 要写入的字节
+ * @param mode 数据/命令（1/0）选择
+ */
 void OLED_WR_Byte(uint8_t dat, uint8_t mode)
 {
 	if (mode)
@@ -61,7 +72,9 @@ void OLED_WR_Byte(uint8_t dat, uint8_t mode)
 	OLED_DC_Set(); // 置位命令数据选择
 }
 
-// 清屏函数
+/**
+ * @brief 清屏
+ */
 void OLED_Clear(void)
 {
 	uint8_t i, n;
@@ -157,10 +170,7 @@ void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text)
 		if ((text[i] >= 0xb0) && (text[i] <= 0xf7) && (text[i + 1] >= 0xa1)) {
 			// 国标简体（GB2312）汉字在晶联讯字库IC中的地址由以下公式来计算：
 			// Address = ((MSB - 0xB0) * 94 + (LSB - 0xA1)+ 846)*32+ BaseAdd;BaseAdd=0
-			// 由于担心8位单片机有乘法溢出问题，所以分三部取地址
-			fontaddr = (text[i] - 0xb0) * 94;
-			fontaddr += (text[i + 1] - 0xa1) + 846;
-			fontaddr = fontaddr * 32;
+			fontaddr = ((text[i] - 0xb0) * 94 + (text[i+1]-0xa1) + 846) * 32;
 
 			addrHigh = (fontaddr & 0xff0000) >> 16; // 地址的高8位,共24位
 			addrMid	 = (fontaddr & 0xff00) >> 8;	// 地址的中8位,共24位

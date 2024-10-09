@@ -28,7 +28,8 @@
         "[markdown]": {
             "editor.wordWrap": "off"
         },
-        "editor.wordWrap": "off"
+        "editor.wordWrap": "off",
+        "Codegeex.RepoIndex": true
     },
     "extensions": {
         "recommendations": [
