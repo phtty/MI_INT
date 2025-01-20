@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Cortex Debug",
+			"cwd": "${workspaceFolder}",
+			"executable": "./build/${workspaceFolderBasename}/${workspaceFolderBasename}.elf",
+			"request": "launch",
+			"type": "cortex-debug",
+			"runToEntryPoint": "main",
+			"servertype": "openocd",
+			"configFiles": [
+				"interface/cmsis-dap.cfg",
+				"target/stm32h7x.cfg"
+			],
+			"svdFile": "D:/SoftWare/keil_packs/Keil/STM32H7xx_DFP/3.1.1/CMSIS/SVD/STM32H750.svd"
+		}
+	]
+}

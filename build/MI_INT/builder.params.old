@@ -1,0 +1,135 @@
+{
+    "name": "MI_INT",
+    "target": "MI_INT",
+    "toolchain": "AC6",
+    "toolchainLocation": "D:\\SoftWare\\keil\\ARM\\ARMCLANG",
+    "toolchainCfgFile": "c:\\Users\\weiyh\\.vscode\\extensions\\cl.eide-3.20.0\\res\\data\\models\\win32/arm.v6.model.json",
+    "buildMode": "fast|multhread",
+    "showRepathOnLog": true,
+    "threadNum": 24,
+    "rootDir": "d:\\Code\\SingleChip\\STM32\\stm32h750\\MI_INT",
+    "dumpPath": "build\\MI_INT",
+    "outDir": "build\\MI_INT",
+    "ram": 655360,
+    "rom": 131072,
+    "incDirs": [
+        "Core/Inc",
+        "Drivers/STM32H7xx_HAL_Driver/Inc",
+        "Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+        "Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+        "Drivers/CMSIS/Include",
+        ".cmsis/include",
+        "MDK-ARM/RTE/_MI_INT",
+        "Drivers/OLED"
+    ],
+    "libDirs": [],
+    "defines": [
+        "USE_HAL_DRIVER",
+        "STM32H750xx"
+    ],
+    "sourceList": [
+        "Core/Src/gpio.c",
+        "Core/Src/main.c",
+        "Core/Src/memorymap.c",
+        "Core/Src/spi.c",
+        "Core/Src/stm32h7xx_hal_msp.c",
+        "Core/Src/stm32h7xx_it.c",
+        "Core/Src/system_stm32h7xx.c",
+        "Core/Src/tim.c",
+        "Drivers/OLED/oled.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c",
+        "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c",
+        "MDK-ARM/startup_stm32h750xx.s"
+    ],
+    "sourceParams": {},
+    "sourceParamsMtime": 1726972869851.792,
+    "options": {
+        "version": 3,
+        "beforeBuildTasks": [],
+        "afterBuildTasks": [
+            {
+                "name": "axf to elf",
+                "command": "axf2elf -d \"D:\\SoftWare\\keil\\ARM\\ARMCLANG\" -i \"${outDir}\\MI_INT.axf\" -o \"${outDir}\\MI_INT.elf\" > \"${outDir}\\axf2elf.log\""
+            }
+        ],
+        "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable",
+            "microcontroller-cpu": "cortex-m7-dp",
+            "microcontroller-fpu": "cortex-m7-dp",
+            "microcontroller-float": "cortex-m7-dp",
+            "target": "cortex-m7-dp"
+        },
+        "c/cpp-compiler": {
+            "optimization": "level-0",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "warnings": "ac5-like-warnings"
+        },
+        "asm-compiler": {
+            "$use": "asm-auto"
+        },
+        "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329",
+            "link-scatter": [
+                "\"d:/Code/SingleChip/STM32/stm32h750/MI_INT/build/MI_INT/MI_INT.sct\""
+            ]
+        }
+    },
+    "env": {
+        "KEIL_OUTPUT_DIR": "MI_INT",
+        "workspaceFolder": "d:\\Code\\SingleChip\\STM32\\stm32h750\\MI_INT",
+        "workspaceFolderBasename": "MI_INT",
+        "OutDir": "d:\\Code\\SingleChip\\STM32\\stm32h750\\MI_INT\\build\\MI_INT",
+        "OutDirRoot": "build",
+        "OutDirBase": "build\\MI_INT",
+        "ProjectName": "MI_INT",
+        "ConfigName": "MI_INT",
+        "ProjectRoot": "d:\\Code\\SingleChip\\STM32\\stm32h750\\MI_INT",
+        "ExecutableName": "d:\\Code\\SingleChip\\STM32\\stm32h750\\MI_INT\\build\\MI_INT\\MI_INT",
+        "ChipPackDir": "",
+        "ChipName": "",
+        "SYS_Platform": "win32",
+        "SYS_DirSep": "\\",
+        "SYS_DirSeparator": "\\",
+        "SYS_PathSep": ";",
+        "SYS_PathSeparator": ";",
+        "SYS_EOL": "\r\n",
+        "EIDE_BUILDER_DIR": "c:\\Users\\weiyh\\.vscode\\extensions\\cl.eide-3.20.0\\res\\tools\\win32\\unify_builder",
+        "EIDE_BINARIES_VER": "12.0.1",
+        "EIDE_MSYS": "C:\\Users\\weiyh\\.eide\\bin\\builder\\msys\\bin",
+        "EIDE_TOOL_GCC_ARM": "c:\\msys64\\mingw64\\bin",
+        "EIDE_TOOL_OPENOCD": "C:\\Users\\weiyh\\.eide\\tools\\openocd_7a1adfbec_mingw32\\bin",
+        "EIDE_TOOL_OPENOCD_7A1ADFBEC_MINGW32": "C:\\Users\\weiyh\\.eide\\tools\\openocd_7a1adfbec_mingw32\\bin",
+        "ToolchainRoot": "D:\\SoftWare\\keil\\ARM\\ARMCLANG"
+    },
+    "sysPaths": [],
+    "sha": {
+        "c/cpp-defines": "64411a9290eaa03f37087e6ba0a4dd0c",
+        "beforeBuildTasks": "d751713988987e9331980363e24189ce",
+        "afterBuildTasks": "9abede46875e68ae9ca4fb6d01c1b15d",
+        "global": "cac9ebb7f9962eedc2224bd91a5b3174",
+        "c/cpp-compiler": "31421e3730d1c525428f5aa2c3dcd167",
+        "asm-compiler": "f16bc066fd83f6b0cf6cd2b7eea65136",
+        "linker": "8a07e573bfbbf5c10c5602c1ce01fd46"
+    }
+}

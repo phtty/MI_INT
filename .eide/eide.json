@@ -1,0 +1,325 @@
+{
+  "name": "MI_INT",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": [
+      {
+        "name": "Application",
+        "files": [],
+        "folders": [
+          {
+            "name": "MDK-ARM",
+            "files": [
+              {
+                "path": "MDK-ARM/startup_stm32h750xx.s"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "User",
+            "files": [],
+            "folders": [
+              {
+                "name": "Core",
+                "files": [
+                  {
+                    "path": "Core/Src/main.c"
+                  },
+                  {
+                    "path": "Core/Src/gpio.c"
+                  },
+                  {
+                    "path": "Core/Src/memorymap.c"
+                  },
+                  {
+                    "path": "Core/Src/spi.c"
+                  },
+                  {
+                    "path": "Core/Src/tim.c"
+                  },
+                  {
+                    "path": "Core/Src/stm32h7xx_it.c"
+                  },
+                  {
+                    "path": "Core/Src/stm32h7xx_hal_msp.c"
+                  }
+                ],
+                "folders": []
+              },
+              {
+                "name": "Head",
+                "files": [
+                  {
+                    "path": "Core/Inc/gpio.h"
+                  },
+                  {
+                    "path": "Core/Inc/main.h"
+                  },
+                  {
+                    "path": "Core/Inc/memorymap.h"
+                  },
+                  {
+                    "path": "Core/Inc/spi.h"
+                  },
+                  {
+                    "path": "Core/Inc/stm32h7xx_hal_conf.h"
+                  },
+                  {
+                    "path": "Core/Inc/stm32h7xx_it.h"
+                  },
+                  {
+                    "path": "Core/Inc/tim.h"
+                  }
+                ],
+                "folders": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Drivers",
+        "files": [],
+        "folders": [
+          {
+            "name": "STM32H7xx_HAL_Driver",
+            "files": [
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c"
+              },
+              {
+                "path": "Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "CMSIS",
+            "files": [
+              {
+                "path": "Core/Src/system_stm32h7xx.c"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "OLED",
+            "files": [
+              {
+                "path": "Drivers/OLED/oled.c"
+              },
+              {
+                "path": "Drivers/OLED/oled.h"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "19f722e9a4a9fe9c16441020620af459"
+  },
+  "targets": {
+    "MI_INT": {
+      "excludeList": [
+        "<virtual_root>/Drivers/oled/oled.c"
+      ],
+      "toolchain": "AC6",
+      "compileConfig": {
+        "cpuType": "Cortex-M7",
+        "floatingPointHardware": "double",
+        "useCustomScatterFile": false,
+        "scatterFilePath": "<YOUR_SCATTER_FILE>.sct",
+        "storageLayout": {
+          "RAM": [
+            {
+              "tag": "IRAM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x20000000",
+                "size": "0x20000"
+              },
+              "isChecked": true,
+              "noInit": false
+            },
+            {
+              "tag": "IRAM",
+              "id": 2,
+              "mem": {
+                "startAddr": "0x24000000",
+                "size": "0x80000"
+              },
+              "isChecked": true,
+              "noInit": false
+            }
+          ],
+          "ROM": [
+            {
+              "tag": "IROM",
+              "id": 1,
+              "mem": {
+                "startAddr": "0x08000000",
+                "size": "0x20000"
+              },
+              "isChecked": true,
+              "isStartup": true
+            }
+          ]
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32h7x",
+        "interface": "cmsis-dap",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "Core/Inc",
+          "Drivers/STM32H7xx_HAL_Driver/Inc",
+          "Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+          "Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+          "Drivers/CMSIS/Include",
+          ".cmsis/include",
+          "MDK-ARM/RTE/_MI_INT",
+          "Drivers/OLED"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32H750xx"
+        ]
+      },
+      "builderOptions": {
+        "AC5": {
+          "version": 4,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": false,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-3",
+            "one-elf-section-per-function": true,
+            "c99-mode": true,
+            "C_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "CXX_FLAGS": "--diag_suppress=1 --diag_suppress=1295",
+            "warnings": "all-warnings",
+            "gnu-extensions": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "xo-base": "",
+            "ro-base": "",
+            "rw-base": ""
+          }
+        },
+        "AC6": {
+          "version": 3,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "use-microLIB": true,
+            "output-debug-info": "enable"
+          },
+          "c/cpp-compiler": {
+            "optimization": "level-0",
+            "language-c": "c99",
+            "language-cpp": "c++11",
+            "warnings": "ac5-like-warnings"
+          },
+          "asm-compiler": {
+            "$use": "asm-auto"
+          },
+          "linker": {
+            "output-format": "elf",
+            "misc-controls": "--diag_suppress=L6329"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.5"
+}

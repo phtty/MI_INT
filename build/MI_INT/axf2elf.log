@@ -1,0 +1,4 @@
+arm-none-eabi-objcopy --update-section ER_IROM1="C:\Users\weiyh\AppData\Local\Temp\\MI_INT_N5fBmRLT.bin" "d:\Code\SingleChip\STM32\stm32h750\MI_INT\build\MI_INT\MI_INT.axf" "d:\Code\SingleChip\STM32\stm32h750\MI_INT\build\MI_INT\MI_INT.elf"
+
+arm-none-eabi-objcopy: d:\Code\SingleChip\STM32\stm32h750\MI_INT\build\MI_INT\MI_INT.elf: warning: allocated section `RW_IRAM2' not in segment
+

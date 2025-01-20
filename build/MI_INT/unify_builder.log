@@ -1,0 +1,680 @@
+[2024-09-22 20:41:57]	[info] incremental build: 30 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\memorymap.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\spi.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_hal_msp.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_it.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\system_stm32h7xx.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\MDK-ARM\startup_stm32h750xx.s': object (.o) file not exist
+
+[2024-09-22 20:41:57]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Core/Src/gpio.o -MMD ./Core/Src/gpio.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./Core/Src/gpio.c:55:34: error: invalid operands to binary expression ('GPIO_TypeDef *' and 'GPIO_TypeDef *')
+   55 |   HAL_GPIO_WritePin(LED_GPIO_Port|OLED_DC_GPIO_Port|OLED_CS1_GPIO_Port|OLED_CS2_GPIO_Port, LED_Pin|OLED_DC_Pin|OLED_CS1_Pin|OLED_CS2_Pin, GPIO_PIN_RESET);
+      |                     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+./Core/Src/gpio.c:62:30: error: invalid operands to binary expression ('GPIO_TypeDef *' and 'GPIO_TypeDef *')
+   62 |   HAL_GPIO_Init(LED_GPIO_Port|OLED_DC_GPIO_Port|OLED_CS1_GPIO_Port|OLED_CS2_GPIO_Port, &GPIO_InitStruct);
+      |                 ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+2 errors generated.
+
+[2024-09-22 20:47:37]	[info] incremental build: 19 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c': object (.o) file not exist
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\MDK-ARM\startup_stm32h750xx.s': object (.o) file not exist
+
+[2024-09-22 20:47:39]	[done]
+	build successfully !
+
+[2024-09-22 22:19:44]	[info] incremental build: 3 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-09-22 22:19:44]	[done]
+	build successfully !
+
+[2024-09-22 22:44:34]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-09-22 22:44:35]	[done]
+	build successfully !
+
+[2024-09-22 22:45:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-09-22 22:45:12]	[done]
+	build successfully !
+
+[2024-09-22 22:49:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-22 22:49:09]	[done]
+	build successfully !
+
+[2024-09-22 22:49:29]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-22 22:49:30]	[done]
+	build successfully !
+
+[2024-09-28 23:27:04]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:27:06]	[done]
+	build successfully !
+
+[2024-09-28 23:28:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:28:11]	[done]
+	build successfully !
+
+[2024-09-28 23:28:45]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:28:45]	[done]
+	build successfully !
+
+[2024-09-28 23:29:16]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:29:16]	[done]
+	build successfully !
+
+[2024-09-28 23:30:06]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:30:06]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Core/Src/main.o -MMD ./Core/Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./Core/Src/main.c:102:2: error: call to undeclared function 'delay_ms'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  102 |         delay_ms(500);
+      |         ^
+./Core/Src/main.c:103:46: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  103 |         OLED_Display_GB2312_string(0, 0, (uint8_t*)"<B2><E2><CA><D4>");
+      |                                                     ^~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+
+[2024-09-28 23:30:16]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': object (.o) file not exist
+
+[2024-09-28 23:30:17]	[done]
+	build successfully !
+
+[2024-09-28 23:30:53]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:30:54]	[done]
+	build successfully !
+
+[2024-09-28 23:31:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:31:30]	[done]
+	build successfully !
+
+[2024-09-28 23:33:09]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:33:09]	[done]
+	build successfully !
+
+[2024-09-28 23:33:28]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:33:28]	[done]
+	build successfully !
+
+[2024-09-28 23:33:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:33:44]	[done]
+	build successfully !
+
+[2024-09-28 23:34:05]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-28 23:34:06]	[done]
+	build successfully !
+
+[2024-09-29 00:01:58]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:01:58]	[done]
+	build successfully !
+
+[2024-09-29 00:03:48]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:03:48]	[done]
+	build successfully !
+
+[2024-09-29 00:03:59]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:03:59]	[done]
+	build successfully !
+
+[2024-09-29 00:04:38]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:04:38]	[done]
+	build successfully !
+
+[2024-09-29 00:04:49]	[done]
+	build successfully !
+
+[2024-09-29 00:13:33]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-09-29 00:13:33]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Drivers/OLED/oled.o -MMD ./Drivers/OLED/oled.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./Drivers/OLED/oled.c:315:25: error: too few arguments to function call, expected 5, have 0
+  315 |         OLED_get_data_from_ROM()
+      |         ~~~~~~~~~~~~~~~~~~~~~~ ^
+./Drivers/OLED/oled.c:140:6: note: 'OLED_get_data_from_ROM' declared here
+  140 | void OLED_get_data_from_ROM(uint8_t addrHigh, uint8_t addrMid, uint8_t addrLow, uint8_t *pbuff, uint8_t DataLen)
+      |      ^                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Drivers/OLED/oled.c:315:26: error: expected ';' after expression
+  315 |         OLED_get_data_from_ROM()
+      |                                 ^
+      |                                 ;
+2 errors generated.
+
+[2024-09-29 00:15:36]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': object (.o) file not exist
+
+[2024-09-29 00:15:36]	[done]
+	build successfully !
+
+[2024-09-29 00:15:46]	[done]
+	build successfully !
+
+[2024-09-29 00:16:29]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:16:29]	[done]
+	build successfully !
+
+[2024-09-29 00:19:00]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:19:00]	[done]
+	build successfully !
+
+[2024-09-29 00:19:21]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:19:22]	[done]
+	build successfully !
+
+[2024-09-29 00:20:11]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:20:11]	[done]
+	build successfully !
+
+[2024-09-29 00:21:35]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:21:35]	[done]
+	build successfully !
+
+[2024-09-29 00:24:43]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:24:44]	[done]
+	build successfully !
+
+[2024-09-29 00:26:27]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 00:26:28]	[done]
+	build successfully !
+
+[2024-09-29 21:14:52]	[info] incremental build: 8 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\memorymap.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\spi.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_hal_msp.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_it.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-09-29 21:14:52]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Core/Src/gpio.o -MMD ./Core/Src/gpio.c
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+./Core/Src/gpio.c:65:51: error: expected ')'
+   65 |         HAL_GPIO_WritePin(OLED_DC_GPIO_Port, OLED_DC_Pin GPIO_PIN_RESET);
+      |                                                          ^
+./Core/Src/gpio.c:65:19: note: to match this '('
+   65 |         HAL_GPIO_WritePin(OLED_DC_GPIO_Port, OLED_DC_Pin GPIO_PIN_RESET);
+      |                          ^
+./Core/Src/gpio.c:74:57: error: expected ')'
+   74 |         HAL_GPIO_WritePin(ENCODER_SW_GPIO_Port, ENCODER_SW_Pin GPIO_PIN_RESET);
+      |                                                                ^
+./Core/Src/gpio.c:74:19: note: to match this '('
+   74 |         HAL_GPIO_WritePin(ENCODER_SW_GPIO_Port, ENCODER_SW_Pin GPIO_PIN_RESET);
+      |                          ^
+2 errors generated.
+
+[2024-09-29 21:15:26]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': object (.o) file not exist
+
+[2024-09-29 21:15:27]	[done]
+	build successfully !
+
+[2024-09-29 21:19:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:19:24]	[done]
+	build successfully !
+
+[2024-09-29 21:20:03]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:20:04]	[done]
+	build successfully !
+
+[2024-09-29 21:20:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:20:24]	[done]
+	build successfully !
+
+[2024-09-29 21:20:47]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:20:47]	[done]
+	build successfully !
+
+[2024-09-29 21:21:19]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:21:19]	[done]
+	build successfully !
+
+[2024-09-29 21:21:27]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:21:27]	[done]
+	build successfully !
+
+[2024-09-29 21:21:55]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:21:56]	[done]
+	build successfully !
+
+[2024-09-29 21:22:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:22:45]	[done]
+	build successfully !
+
+[2024-09-29 21:34:13]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:34:13]	[done]
+	build successfully !
+
+[2024-09-29 21:34:49]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:34:49]	[done]
+	build successfully !
+
+[2024-09-29 21:40:55]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-29 21:40:56]	[done]
+	build successfully !
+
+[2024-09-29 22:01:45]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-29 22:01:45]	[done]
+	build successfully !
+
+[2024-09-30 20:40:59]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 20:41:01]	[done]
+	build successfully !
+
+[2024-09-30 20:41:24]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-30 20:41:24]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Core/Src/main.o -MMD ./Core/Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./Core/Src/main.c:107:46: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  107 |         OLED_Display_GB2312_string(0, 0, (uint8_t*)"<D0><FD>?<B1><E0><C2><EB><C6><F7><B2><E2><CA><D4>");
+      |                                                     ^~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Core/Src/main.c:121:28: error: cannot take the address of an rvalue of type 'int'
+  121 |                 sprintf(text,"count:%d", &(int)encoder_count);
+      |                                          ^~~~~~~~~~~~~~~~~~~
+./Core/Src/main.c:122:36: warning: passing 'char[128]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  122 |                 OLED_Display_GB2312_string(0, 4, text);
+      |                                                  ^~~~
+Drivers/OLED\oled.h:39:64: note: passing argument to parameter 'text' here
+   39 | void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text);
+      |                                                                ^
+2 warnings and 1 error generated.
+
+[2024-09-30 20:41:44]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': object (.o) file not exist
+
+[2024-09-30 20:41:44]	[done]
+	build successfully !
+
+[2024-09-30 20:44:23]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+
+[2024-09-30 20:44:23]	compilation failed at : "d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c", exit code: 1
+command: 
+  "D:\SoftWare\keil\ARM\ARMCLANG\bin\armclang.exe" --target=arm-arm-none-eabi -c -xc -std=c99 -ICore/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc -IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32H7xx/Include -IDrivers/CMSIS/Include -I.cmsis/include -IMDK-ARM/RTE/_MI_INT -IDrivers/OLED -DUSE_HAL_DRIVER -DSTM32H750xx -mfloat-abi=hard -mfpu=fpv5-d16 -mcpu=cortex-m7 -mlittle-endian -D__MICROLIB -O0 -fno-function-sections -funsigned-char -fno-rtti -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -g -o ./build/MI_INT/.obj/Core/Src/main.o -MMD ./Core/Src/main.c
+   at unify_builder.Program.Main(String[] args_)
+---
+./Core/Src/main.c:107:46: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  107 |         OLED_Display_GB2312_string(0, 0, (uint8_t*)"<D0><FD>?<B1><E0><C2><EB><C6><F7><B2><E2><CA><D4>");
+      |                                                     ^~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./Core/Src/main.c:122:36: warning: cast to smaller integer type 'uint8_t' (aka 'unsigned char') from 'char *' [-Wpointer-to-int-cast]
+  122 |                 OLED_Display_GB2312_string(0, 4, (uint8_t)text);
+      |                                                  ^~~~~~~~~~~~~
+./Core/Src/main.c:122:36: error: incompatible integer to pointer conversion passing 'uint8_t' (aka 'unsigned char') to parameter of type 'uint8_t *' (aka 'unsigned char *') [-Wint-conversion]
+  122 |                 OLED_Display_GB2312_string(0, 4, (uint8_t)text);
+      |                                                  ^~~~~~~~~~~~~
+Drivers/OLED\oled.h:39:64: note: passing argument to parameter 'text' here
+   39 | void OLED_Display_GB2312_string(uint8_t x, uint8_t y, uint8_t *text);
+      |                                                                ^
+2 warnings and 1 error generated.
+
+[2024-09-30 20:44:30]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': object (.o) file not exist
+
+[2024-09-30 20:44:31]	[done]
+	build successfully !
+
+[2024-09-30 20:49:19]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 20:49:20]	[done]
+	build successfully !
+
+[2024-09-30 20:58:52]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 20:58:53]	[done]
+	build successfully !
+
+[2024-09-30 20:59:14]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 20:59:15]	[done]
+	build successfully !
+
+[2024-09-30 20:59:50]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 20:59:50]	[done]
+	build successfully !
+
+[2024-09-30 21:11:25]	[info] incremental build: 1 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+
+[2024-09-30 21:11:26]	[done]
+	build successfully !
+
+[2024-10-09 17:33:49]	[info] incremental build: 2 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+
+[2024-10-09 17:33:51]	[done]
+	build successfully !
+
+[2025-01-20 22:12:09]	[info] incremental build: 30 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\memorymap.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\spi.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_hal_msp.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_it.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\system_stm32h7xx.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c': compiler options has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\MDK-ARM\startup_stm32h750xx.s': compiler options has been changed.
+
+[2025-01-20 22:12:12]	[done]
+	build successfully !
+
+[2025-01-20 22:15:05]	[info] incremental build: 30 source files changed
+These source files will be recompiled
+---
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\gpio.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\main.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\memorymap.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\spi.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_hal_msp.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\stm32h7xx_it.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\system_stm32h7xx.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Src\tim.c': source file has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\OLED\oled.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\main.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_gpio.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_spi_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c': dependence 'd:\Code\SingleChip\STM32\stm32h750\MI_INT\Core\Inc\stm32h7xx_hal_conf.h' has been changed.
+'d:\Code\SingleChip\STM32\stm32h750\MI_INT\MDK-ARM\startup_stm32h750xx.s': source file has been changed.
+
+[2025-01-20 22:15:06]	[done]
+	build successfully !
+

@@ -1,0 +1,1 @@
+--cpu=Cortex-M7.fp.dp --library_type=microlib --scatter "d:/Code/SingleChip/STM32/stm32h750/MI_INT/build/MI_INT/MI_INT.sct" --diag_suppress=L6329 --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols --info sizes --info totals --info unused --info veneers --list ./build/MI_INT/MI_INT.map
