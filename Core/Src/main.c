@@ -18,10 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "gpio.h"
 #include "memorymap.h"
 #include "spi.h"
 #include "tim.h"
-#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -74,7 +74,15 @@ int main(void)
 	/* USER CODE END 1 */
 
 	/* MPU Configuration--------------------------------------------------------*/
- 	MPU_Config();
+	MPU_Config();
+
+	/* Enable the CPU Cache */
+
+	/* Enable I-Cache---------------------------------------------------------*/
+	SCB_EnableICache();
+
+	/* Enable D-Cache---------------------------------------------------------*/
+	SCB_EnableDCache();
 
 	/* MCU Configuration--------------------------------------------------------*/
 
@@ -97,17 +105,16 @@ int main(void)
 	MX_SPI1_Init();
 	MX_TIM2_Init();
 	/* USER CODE BEGIN 2 */
-	char text[128] = {0};
+	char text[128]		  = {0};
 	uint8_t encoder_count = 0;
 
 	OLED_Init();
-	OLED_ColorTurn(0);//0Õý³£ÏÔÊ¾£¬1 ·´É«ÏÔÊ¾
-	OLED_DisplayTurn(0);//0Õý³£ÏÔÊ¾ 1 ÆÁÄ»·­×ªÏÔÊ¾
+	OLED_ColorTurn(0);
+	OLED_DisplayTurn(0);
 	OLED_Clear();
-	OLED_Display_GB2312_string(0, 0, (uint8_t*)"Ðý×ª±àÂëÆ÷²âÊÔ");
+	OLED_Display_GB2312_string(0, 0, (uint8_t *)"ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 	HAL_Delay(500);
-	
 
 	HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
 	/* USER CODE END 2 */
@@ -118,12 +125,7 @@ int main(void)
 		encoder_count = TIM2->CNT;
 		/* USER CODE END WHILE */
 
-		sprintf(text,"count:%d", encoder_count);
-		OLED_Display_GB2312_string(0, 4, (uint8_t*)text);
-
 		/* USER CODE BEGIN 3 */
-		
-			
 	}
 	/* USER CODE END 3 */
 }
@@ -143,11 +145,6 @@ void SystemClock_Config(void)
 
 	/** Configure the main internal regulator output voltage
 	 */
-	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-
-	while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
-
-	__HAL_RCC_SYSCFG_CLK_ENABLE();
 	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
 	while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}

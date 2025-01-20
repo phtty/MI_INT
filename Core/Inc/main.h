@@ -57,20 +57,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_Pin					GPIO_PIN_3			// 开发板LED
-#define LED_GPIO_Port			GPIOE
-#define ENCODER_CLK_Pin			GPIO_PIN_0			// 编码器
-#define ENCODER_CLK_GPIO_Port	GPIOA
-#define ENCODER_DT_Pin			GPIO_PIN_1
-#define ENCODER_DT_GPIO_Port	GPIOA
-#define ENCODER_SW_Pin			GPIO_PIN_2
-#define ENCODER_SW_GPIO_Port	GPIOA
-#define OLED_DC_Pin				GPIO_PIN_4			// OLED片选
-#define OLED_DC_GPIO_Port		GPIOA
-#define OLED_CS1_Pin			GPIO_PIN_4			// OLED片选
-#define OLED_CS1_GPIO_Port		GPIOC
-#define OLED_CS2_Pin			GPIO_PIN_5
-#define OLED_CS2_GPIO_Port		GPIOC
+#define LED_Pin GPIO_PIN_3
+#define LED_GPIO_Port GPIOE
+#define ENCODER_CLK_Pin GPIO_PIN_0
+#define ENCODER_CLK_GPIO_Port GPIOA
+#define ENCODER_DT_Pin GPIO_PIN_1
+#define ENCODER_DT_GPIO_Port GPIOA
+#define OLED_DC_Pin GPIO_PIN_4
+#define OLED_DC_GPIO_Port GPIOA
+#define OLED_SCK_Pin GPIO_PIN_5
+#define OLED_SCK_GPIO_Port GPIOA
+#define OLED_MISO_Pin GPIO_PIN_6
+#define OLED_MISO_GPIO_Port GPIOA
+#define OLED_MOSI_Pin GPIO_PIN_7
+#define OLED_MOSI_GPIO_Port GPIOA
+#define OLED_CS1_Pin GPIO_PIN_4
+#define OLED_CS1_GPIO_Port GPIOC
+#define OLED_CS2_Pin GPIO_PIN_5
+#define OLED_CS2_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
